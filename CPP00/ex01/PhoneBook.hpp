@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 19:24:08 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/05/27 18:13:23 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/05/29 18:29:30 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
-class Contact{
+#include "Contact.hpp"
 
+class Phonebook
+{
 	private:
-		std::string firstName;
-		std::string lastName;
-		std::string nickname;
-		std::string phoneNumber;
-		std::string darkestSecret; 
-
-	public:
-		Contact();
-		
-	
-
-}
-
-class Phonebook {
-	private:
-		Contact contacts[8];
+		Contact::Contact contacts[8];
 		int currentIndex;
 		int totalContacts;
 
@@ -42,4 +29,6 @@ class Phonebook {
 		void displayContact(int index) const;
 		void deleteContact(int index);
 		void clearContacts();
-};`
+};
+
+#endif
