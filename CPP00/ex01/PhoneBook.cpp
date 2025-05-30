@@ -6,13 +6,12 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 18:19:05 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/05/29 18:22:02 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/05/30 17:55:28 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void	PhoneBook::PhoneBook()
+void	Phonebook::Phonebook()
 {
-	
 }

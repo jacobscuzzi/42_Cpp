@@ -6,15 +6,15 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 18:22:51 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/05/29 18:29:26 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/05/30 17:21:46 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
-#define CONTACT_HPP
+# define CONTACT_HPP
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
 
 class Contact
 {
@@ -31,6 +31,6 @@ class Contact
 		
 	
 
-}
+};
 
 #endif
