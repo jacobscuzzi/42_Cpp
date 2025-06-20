@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jbaumfal <jbaumfal@42.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 19:24:08 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/05/30 17:51:34 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/06/17 19:47:54 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,22 @@ enum pb_command
 	EXIT
 };
 
-class	Phonebook
+class	PhoneBook
 {
 	private:
 		Contact contacts[8];
-		int currentIndex;
 		int totalContacts;
+		int currentIndex;
 
 	public:
-		Phonebook();
-		void add(const Contact& contact);
-		void search() const;
-		void displayContact(int index) const;
-		void deleteContact(int index);
-		void clearContacts();
+		PhoneBook();
+		~PhoneBook();
+		void	add(const Contact& contact);
+		void	search() const;
+		void	exit();
+		void	displayContact(int index) const;
+		void	deleteContact(int index);
+		void	clearContacts();
 };
 
 #endif

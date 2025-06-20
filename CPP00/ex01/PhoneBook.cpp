@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jbaumfal <jbaumfal@42.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 18:19:05 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/05/30 17:55:28 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/06/17 21:17:15 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void	Phonebook::Phonebook()
+PhoneBook::PhoneBook() : totalContacts(0), currentIndex(0)
 {
+	std::cout << "Phonebook created" << std::endl;
+}
+                                                      
+PhoneBook::~Phonebook()
+{
+	std::cout << "Phonebook destroyed" << std::endl;
 }

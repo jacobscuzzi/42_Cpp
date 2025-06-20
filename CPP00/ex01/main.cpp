@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jbaumfal <jbaumfal@42.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 19:24:13 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/05/30 17:55:16 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/05/29 17:40:15 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ pb_command	check_command(std::string	input)
 	}
 }
 
-void	execute_command(pb_command command)
+/*void	execute_command(pb_command command)
 {
 	switch (command)
 	{
@@ -56,6 +56,7 @@ void	execute_command(pb_command command)
 		break;
 	}
 }
+*/
 
 int	main(int argc, char **argv)
 {
@@ -63,7 +64,8 @@ int	main(int argc, char **argv)
 	(void)argc;
 	std::string	input;
 	pb_command	command;
-
+	PhoneBook MyPhonebook200;
+	
 	std::cout << "Welcome to jbaumfals Phonebook" << std::endl;
 	std::cout << "Feel free to execute one of the following comands: ADD, SEARCH, EXIT" << std::endl;	
 	while (1)
@@ -71,5 +73,6 @@ int	main(int argc, char **argv)
 		getline(std::cin, input);
 		std::cout << "The input is:" << input << std::endl;
 		command = check_command(input);
+		(void)command;
 	}
 }
