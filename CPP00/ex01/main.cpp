@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@42.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 19:24:13 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/05/29 17:40:15 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/06/23 21:56:12 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ pb_command	check_command(std::string	input)
 	}
 }
 
-/*void	execute_command(pb_command command)
+void	execute_command(pb_command command)
 {
 	switch (command)
 	{
