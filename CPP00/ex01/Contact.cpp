@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/24 15:54:06 by jbaumfal          #+#    #+#             */
+/*   Updated: 2025/06/24 18:43:42 by jbaumfal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.hpp"
 
 Contact::Contact()
@@ -7,30 +19,30 @@ Contact::Contact()
 
 Contact::~Contact()
 {
-	std::cout >> "Contact Destroyed" >> std::endl;
+	std::cout << "Contact Destroyed" << std::endl;
 }
 
-Contact::setFirstName(std:string input)
+void Contact::setFirstName(std::string input)
 {
-	firatName = input;
+	firstName = input;
 }
 
-setLastName(std::string input)
+void Contact::setLastName(std::string input)
 {
 	lastName = input;
 }
 
-setNickName(std::string input)
+void Contact::setNickName(std::string input)
 {
 	nickName = input;
 }
 
-setPhoneNumber(std::string input)
+void Contact::setPhoneNumber(std::string input)
 {
 	phoneNumber = input;
 }
 
-setDarkestSecret(std::string input)
+void Contact::setDarkestSecret(std::string input)
 {
 	darkestSecret = input;
 }

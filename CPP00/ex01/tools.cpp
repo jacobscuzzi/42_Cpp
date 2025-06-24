@@ -1,43 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   operations.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/10 19:24:08 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/06/24 19:02:57 by jbaumfal         ###   ########.fr       */
+/*   Created: 2025/06/24 15:54:49 by jbaumfal          #+#    #+#             */
+/*   Updated: 2025/06/24 16:02:31 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "PhoneBook.hpp"
 
-#include "Contact.hpp"
 
-enum pb_command
-{
-	UNKNOWN,
-	ADD,
-	SEARCH,
-	EXIT
-};
-
-class	PhoneBook
-{
-	private:
-		Contact contacts[8];
-		int totalContacts;
-		int currentIndex;
-
-	public:
-		PhoneBook();
-		~PhoneBook();
-		void	add();
-		void	search();
-		void	exit();
-		void	execute_command(pb_command command);
-		
-};
-
-#endif
