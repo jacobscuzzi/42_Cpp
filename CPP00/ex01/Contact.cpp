@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 15:54:06 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/06/24 18:43:42 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/06/24 23:37:07 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,28 @@ Contact::Contact()
 Contact::~Contact()
 {
 	std::cout << "Contact Destroyed" << std::endl;
+}
+
+std::string	Contact::getFirstName()
+{
+	return (firstName);
+}
+std::string	Contact::getLastName()
+{
+	return (lastName);
+}
+std::string	Contact::getNickName()
+{
+	return (nickName);
+}
+std::string	Contact::getPhoneNumber()
+{
+	return (phoneNumber);
+}
+
+std::string	Contact::getDarkestSecret()
+{
+	return (darkestSecret);
 }
 
 void Contact::setFirstName(std::string input)
@@ -46,3 +68,4 @@ void Contact::setDarkestSecret(std::string input)
 {
 	darkestSecret = input;
 }
+

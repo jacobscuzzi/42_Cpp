@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 19:24:13 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/06/24 19:03:17 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/06/24 23:46:08 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,11 @@ int	main(int argc, char **argv)
 	pb_command	command;
 	PhoneBook MyPhonebook2000;
 	
-	std::cout << "Welcome to jbaumfals Phonebook" << std::endl;
-	std::cout << "Feel free to execute one of the following comands: ADD, SEARCH, EXIT" << std::endl;	
+	printBanner();
+	std::cout << "Welcome to My Phonebook 2k" << std::endl;
+	std::cout << "Feel free to execute one of the following comands: ADD, SEARCH, EXIT" << std::endl;
 	while (1)
-	{	
+	{
 		getline(std::cin, input);
 		std::cout << "The input is:" << input << std::endl;
 		command = check_command(input);

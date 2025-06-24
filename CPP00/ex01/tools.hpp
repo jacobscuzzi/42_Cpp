@@ -1,45 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   tools.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/10 19:24:08 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/06/24 19:32:30 by jbaumfal         ###   ########.fr       */
+/*   Created: 2025/06/24 19:26:07 by jbaumfal          #+#    #+#             */
+/*   Updated: 2025/06/24 23:40:54 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
 
-# include "Contact.hpp"
-# include "tools.hpp"
+#ifndef TOOLS_HPP
+# define TOOLS_HPP
 
-enum pb_command
-{
-	UNKNOWN,
-	ADD,
-	SEARCH,
-	EXIT
-};
+void		printSearchBanner();
+void		printBanner();
 
-class	PhoneBook
-{
-	private:
-		Contact contacts[8];
-		int totalContacts;
-		int currentIndex;
-
-	public:
-		PhoneBook();
-		~PhoneBook();
-		void	add();
-		void	search();
-		void	exit();
-		void	execute_command(pb_command command);
-		void	printContactPreview();
-		
-};
-
-#endif
+std::string	makeStringSizeTen(std::string input_string);
+# endif
