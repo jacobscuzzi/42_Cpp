@@ -6,28 +6,42 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 15:54:49 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/06/24 23:43:41 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/07/08 20:02:12 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <iostream>
-#include <string>
+#include "PhoneBook.hpp"
 
 
-void printBanner() {
-    std::cout << "█▄█ █ █   █▀█ █ █ █▀█ █▄█ █▀▀ █▀▄ █▀█ █▀█ █ █   ▀▀█ █ █" << std::endl;
-    std::cout << "█▀█ ▀█▀   █▀▀ █▀█ █▄█ █▀█ █▀▀ █▀▄ █▄█ █▄█ █▀▄   █▀  █▀▄" << std::endl;
-    std::cout << "▀ ▀  ▀    ▀   ▀ ▀ ▀▀▀ ▀ ▀ ▀▀▀ ▀▀  ▀▀▀ ▀▀▀ ▀ ▀   ▀▀▀ ▀ ▀" << std::endl;
+void print_banner()
+{
+	std::cout << "█▄█ █ █   █▀█ █ █ █▀█ █▄█ █▀▀ █▀▄ █▀█ █▀█ █ █   ▀▀█ █ █" << std::endl;
+	usleep(100000);
+	std::cout << "█▀█ ▀█▀   █▀▀ █▀█ █▄█ █▀█ █▀▀ █▀▄ █▄█ █▄█ █▀▄   █▀  █▀▄" << std::endl;
+	usleep(100000);
+	std::cout << "▀ ▀  ▀    ▀   ▀ ▀ ▀▀▀ ▀ ▀ ▀▀▀ ▀▀  ▀▀▀ ▀▀▀ ▀ ▀   ▀▀▀ ▀ ▀" << std::endl;
+	usleep(100000);
 }
 
 
-void printSearchBanner() {
-    std::cout << "          █▄█ █ █   █▀█ ▀▀█ █ █" << std::endl;
-    std::cout << "          █▀█ ▀█▀   █▀▀ █▀  █▀▄" << std::endl;
-    std::cout << "          ▀ ▀  ▀    ▀   ▀▀▀ ▀ ▀" << std::endl;
+void print_search_banner()
+{
+	std::cout << "          █▄█ █ █   █▀█ ▀▀█ █ █" << std::endl;
+	usleep(100000);
+	std::cout << "          █▀█ ▀█▀   █▀▀ █▀  █▀▄" << std::endl;
+	usleep(100000);
+	std::cout << "          ▀ ▀  ▀    ▀   ▀▀▀ ▀ ▀" << std::endl;
 }
 
+
+void print_new_contact_banner()
+{
+	std::cout << " █▄█ █▀▀ █ █   █▀▀ █▀█ █▄█ ▀█▀ █▀█ █▀▀ ▀█▀" << std::endl;
+	usleep(100000);
+	std::cout << " █▀█ █▀▀ █▄█   █   █▄█ █▀█  █  █▀█ █    █ " << std::endl;
+	usleep(100000);
+	std::cout << " ▀ ▀ ▀▀▀ ▀ ▀   ▀▀▀ ▀▀▀ ▀ ▀  ▀  ▀ ▀ ▀▀▀  ▀ " << std::endl;
+}
 
 std::string makeStringSizeTen(std::string input_string)
 {

@@ -6,42 +6,25 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 19:24:13 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/06/24 23:46:08 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/07/08 19:59:03 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "PhoneBook.hpp"
 
-#include <iostream>
-#include <string>
-
 
 
 pb_command	check_command(std::string	input)
 {
 	if (input == "ADD")
-	{
-		std::cout << "ADD operator detected" << std::endl;
 		return ADD;
-	}
 	else if (input == "SEARCH")
-	{	
-		std::cout << "SEARCH operator detected" << std::endl;
 		return SEARCH;
-
-	}
 	if (input == "EXIT")
-	{	
-		std::cout << "EXIT operator detected" << std::endl;
 		return EXIT;
-	}
 	else
-	{
-		std::cout << "This input is ignored, i dont know what you talking about"<< std::endl;
-		std::cout << "Try ADD, SEARCH, or EXIT" << std::endl;
 		return UNKNOWN;
-	}
 }
 
 
@@ -50,17 +33,25 @@ int	main(int argc, char **argv)
 	(void)argv;
 	(void)argc;
 	std::string	input;
+	system("clear");
 	pb_command	command;
-	PhoneBook MyPhonebook2000;
-	
-	printBanner();
-	std::cout << "Welcome to My Phonebook 2k" << std::endl;
-	std::cout << "Feel free to execute one of the following comands: ADD, SEARCH, EXIT" << std::endl;
-	while (1)
 	{
-		getline(std::cin, input);
-		std::cout << "The input is:" << input << std::endl;
-		command = check_command(input);
-		MyPhonebook2000.execute_command(command);
+		PhoneBook MyPhonebook2000;
+		system("clear");
+		print_banner();
+		std::cout << "Welcome to My Phonebook 2k" << std::endl;
+		while (1)
+		{
+			std::cout << "Feel free to execute one of the following comands: ADD, SEARCH, EXIT" << std::endl;
+			
+			if (!getline(std::cin, input))
+				break;
+			command = check_command(input);
+			MyPhonebook2000.execute_command(command);
+			if (command == EXIT)
+				break ;
+		}
 	}
+	std::cout << "You have exited this Phonebook... I have deleted all Contacts and the Phonebook" << std::endl;
+	std::cout << "Good Bye FOREVER ...... ITS OVER" << std::endl;
 }

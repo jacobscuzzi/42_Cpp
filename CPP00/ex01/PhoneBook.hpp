@@ -6,15 +6,21 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 19:24:08 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/06/24 19:32:30 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/07/08 17:44:48 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
+# include <unistd.h>
+# include <iostream>
+# include <string>
+# include <cstdlib>
+
 # include "Contact.hpp"
 # include "tools.hpp"
+
 
 enum pb_command
 {

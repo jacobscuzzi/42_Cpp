@@ -6,15 +6,17 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 18:22:51 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/06/24 23:31:56 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/07/08 17:45:54 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
+# include <unistd.h>
 # include <iostream>
 # include <string>
+# include <cstdlib>
 
 class Contact
 {

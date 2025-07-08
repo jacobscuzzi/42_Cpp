@@ -6,14 +6,16 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 15:54:06 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/06/24 23:37:07 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/07/08 17:48:10 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 Contact::Contact()
 {
+	usleep(100000);
 	std::cout << "Contact Created" << std::endl;
 }
 
