@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 18:19:05 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/07/08 20:00:00 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/07/09 22:29:06 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,10 @@ void	PhoneBook::printContactPreview()
 }
 void	PhoneBook::search()
 {
-	std::string	index_input;
+	std::string			input_string;
+	int					index_int;
 
+	index_int = 0;
 	if (totalContacts == 0)
 	{
 		std::cout << "This is an empty phonebook , nothing to search for here ...." << std::endl;
@@ -96,15 +98,17 @@ void	PhoneBook::search()
 	system("clear");
 	print_search_banner();
 	this->printContactPreview();
-	std::cout << "Welcome to the Search Operation, Feel free to pass me the index of the Contact you want to see: ";
-	while (1)
-	{
-		if (!getline(std::cin, index_input))
-				break;
-		
-	}
+	std::cout << "Welcome to the Search Operation, Feel free to pass me the index of the Contact you want to see:" << std::endl;
+	if (!getline(std::cin, input_string))
+		return ;
+	std::istringstream	input_stream(input_string);
+	if (!(input_stream >> index_int))
+		std::cout << "This is no number are you stupid? Try SEARCH again with a valid index" << std::endl;
+	else if (index_int >= totalContacts)
+		std::cout << "This index is to high. Aint no contact with that number yo! Try SEARCH again with a valid index" << std::endl;
+	else
+		contacts[index_int].printContact();
 }
-
 
 void	PhoneBook::execute_command(pb_command command)
 {

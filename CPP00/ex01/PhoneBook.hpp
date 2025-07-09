@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 19:24:08 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/07/08 17:44:48 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/07/09 21:03:06 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <iostream>
 # include <string>
+# include <sstream>
 # include <cstdlib>
 
 # include "Contact.hpp"

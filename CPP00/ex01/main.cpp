@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 19:24:13 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/07/08 19:59:03 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/07/09 22:31:21 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ pb_command	check_command(std::string	input)
 	if (input == "EXIT")
 		return EXIT;
 	else
+	{
+		std::cout << "The fuck is this..." << input << "??? , i dont know this comment" << std::endl;
 		return UNKNOWN;
+	}
 }
-
 
 int	main(int argc, char **argv)
 {
