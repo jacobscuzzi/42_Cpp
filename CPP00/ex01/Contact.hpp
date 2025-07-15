@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 18:22:51 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/07/09 22:23:13 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/07/15 21:00:49 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <iostream>
 # include <string>
+# include <sstream>
 # include <cstdlib>
 
 class Contact

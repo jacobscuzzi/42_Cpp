@@ -1,7 +1,7 @@
 NAME = deutschebank
 
 SRCS = 	Account.cpp \
-		Contact.tests.cpp
+		tests.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
