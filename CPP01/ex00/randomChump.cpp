@@ -5,6 +5,6 @@
  {
 	Zombie	new_zombie(name);
 
-	new_zombie.announce;
+	new_zombie.announce();
 
  }
