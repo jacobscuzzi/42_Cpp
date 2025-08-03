@@ -3,19 +3,25 @@
 HumanB::HumanB(std::string name)
 {
 	_name = name;
+	std::cout << "Once upon a time there was a new Human, of the type B. His name was " << _name << std::endl;
+	sleep(2);
 }
 
 HumanB::~HumanB()
 {
 	std::cout <<  "HumanB is dead. RIP. His name was " << _name << std::endl;
+	sleep(2);
 }
 
 void HumanB::attack()
 {
-	std::cout << _name << "attacks with their" << _arm->getType() << std::endl;
+	std::cout << _name << " attacks with their weapon:" << _arm->getType() << std::endl;
+	sleep(2);
 }
 
 void	HumanB::setWeapon(Weapon &arm)
 {
 	_arm = &arm;
+	std::cout <<  "THe Human B changes his arm to: " << _arm->getType() << std::endl;
+	sleep(2);
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <unistd.h>
 
 #ifndef WEAPON_HPP
 # define WEAPON_HPP
