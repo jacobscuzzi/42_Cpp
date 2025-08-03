@@ -5,30 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/03 23:01:38 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/08/03 23:01:39 by jbaumfal         ###   ########.fr       */
+/*   Created: 2025/08/03 23:01:48 by jbaumfal          #+#    #+#             */
+/*   Updated: 2025/08/04 01:37:02 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
- 
- 
- int main()
- {
- 	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
- 	}
- 	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
+#include "manipulator.hpp"
+
+int	main(int argc, char **argv)
+{
+	std::string filename;
+	std::string s1;
+	std::string s2;
+	if (argc != 4)
+	{
+		std::cout << "This program needs 3 arguments: Filename string_to_replace new_string" << std::endl;
+		return 1;
 	}
+	(void)argv;
 }
+

@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   manipulator.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/03 23:01:38 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/08/03 23:01:39 by jbaumfal         ###   ########.fr       */
+/*   Created: 2025/08/03 23:01:54 by jbaumfal          #+#    #+#             */
+/*   Updated: 2025/08/04 01:37:33 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
- 
- 
- int main()
- {
- 	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
- 	}
- 	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-}
+#ifndef MANIPULATOR_HPP
+# define MANIPULATOR_HPP
+
+# include <string>
+# include <iostream>
+
+#endif
