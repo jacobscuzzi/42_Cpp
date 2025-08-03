@@ -1,6 +1,7 @@
-NAME =		walking_dead_xXL
+NAME = violence
 
-SRCS = 		main.cpp Zombie.cpp zombieHorde.cpp
+SRCS = 		main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+
 CPP =		c++
 
 CPP_FLAGS =	-Werror -Wextra -Wall -std=c++98
@@ -18,7 +19,7 @@ $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS)	
 
 fclean: clean
 	$(RM) $(NAME)
