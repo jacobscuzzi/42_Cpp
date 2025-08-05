@@ -16,7 +16,7 @@ OBJECTS		= $(SOURCES:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	$(CPP) $(CPP_FLAGS) = -o $@ $^
+	$(CPP) $(CPP_FLAGS) -o $@ $^
 
 %.o: %.cpp
 	$(CPP) $(CPP_FLAGS) -c $< -o $@
