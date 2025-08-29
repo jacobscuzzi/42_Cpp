@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 20:27:23 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/08/30 01:33:22 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/08/30 01:39:56 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,7 @@ Fixed::Fixed(const float float_num)
 
 	std::cout << "Float Constructor Called" << std::endl;
 	scaled = float (float_num * (1 << fracionalBits));
-	if (scaled >= 0.0f)
-		rawBits = static_cast<int>(scaled + 0.5f);
-	else
-		rawBits = static_cast<int>(scaled - 0.5f);
+	rawBits = (int) (roundf(scaled));
 }
 
 

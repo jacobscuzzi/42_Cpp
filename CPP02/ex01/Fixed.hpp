@@ -6,12 +6,13 @@
 /*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 20:27:28 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/08/30 01:15:20 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/08/30 01:38:59 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
+#include <cmath>
 
 
 class Fixed
