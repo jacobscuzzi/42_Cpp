@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jbaumfal <jbaumfal@42.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 20:27:28 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/09/01 16:28:52 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/09/02 18:10:29 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,18 @@ class Fixed
 		Fixed					operator-(const Fixed &other) const;
 		Fixed					operator*(const Fixed &other) const;
 		Fixed					operator/(const Fixed &other) const;
+
+		Fixed					&operator++( void );
+		Fixed					&operator--( void );
+		Fixed					operator++( int );
+		Fixed					operator--( int );
+
+		static Fixed		&min(Fixed &a, Fixed &b);
+		static const Fixed	&min(const Fixed &a, const Fixed &b);
+		static const Fixed	&max(Fixed &a, Fixed &b);
+		static  Fixed		&max(const Fixed &a, const Fixed &b);
+
+		
 		
 		friend std::ostream&	operator<<(std::ostream& stream, const Fixed& object);
 };

@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@42.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 20:27:23 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/09/02 15:15:26 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/09/02 18:13:26 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,4 +161,58 @@ Fixed	Fixed::operator/(const Fixed &other) const
 	quot.setRawBits((this->rawBits << fracionalBits) / other.rawBits);
 
 	return (quot);
+}
+
+// ===== INCREMENT / DECREMENT OPERATORS=====
+
+Fixed	&Fixed::operator++( void )
+{
+	rawBits++;
+	return (*this);
+}
+
+Fixed	&Fixed::operator--( void )
+{
+	rawBits--;
+	return (*this);
+}
+
+Fixed	Fixed::operator++( int )
+{
+	Fixed	old(*this);
+	rawBits++;
+	return (old);
+}
+
+Fixed	Fixed::operator--( int )
+{
+	Fixed	old(*this);
+	rawBits--;
+	return (old);
+}
+
+//	MIN / MAX
+
+static Fixed	&max( Fixed &a,  Fixed &b)
+{
+	if (a.getRawBits() >= b.getRawBits())
+		return (a);
+	else
+		return (b);
+}
+static const Fixed	&max(const Fixed &a, const Fixed &b)
+{
+	
+}
+
+static Fixed	&min( Fixed &a,  Fixed &b)
+{
+	if (a.getRawBits() <= b.getRawBits())
+		return (a);
+	else
+		return (b);
+}
+static	const Fixed	&min(const Fixed &a, const Fixed &b)
+{
+	
 }

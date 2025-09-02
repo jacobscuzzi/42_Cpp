@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@42.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 12:57:23 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/09/02 15:19:05 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/09/02 17:34:29 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,32 +139,32 @@ std::cout << std::endl;
 // ===== INCREMENT/DECREMENT OPERATORS TESTING =====
 std::cout << "=== INCREMENT/DECREMENT OPERATORS ===" << std::endl;
 
-// Fixed testIncDec(5.5f);
-// std::cout << "Starting value: " << testIncDec << std::endl;
+Fixed testIncDec(5.5f);
+std::cout << "Starting value: " << testIncDec << std::endl;
 
-// // Test pre-increment
-// std::cout << "Pre-increment tests (++obj):" << std::endl;
-// std::cout << "++testIncDec = " << ++testIncDec << " (value is now " << testIncDec << ")" << std::endl;
-// std::cout << std::endl;
+//Test pre-increment
+std::cout << "Pre-increment tests (++obj):" << std::endl;
+std::cout << "++testIncDec = " << ++testIncDec << " (value is now " << testIncDec << ")" << std::endl;
+std::cout << std::endl;
 
-// // Test post-increment
-// std::cout << "Post-increment tests (obj++):" << std::endl;
-// Fixed temp = testIncDec++;
-// std::cout << "testIncDec++ returned " << temp << " (value is now " << testIncDec << ")" << std::endl;
-// std::cout << std::endl;
+//Test post-increment
+std::cout << "Post-increment tests (obj++):" << std::endl;
+Fixed temp = testIncDec++;
+std::cout << "testIncDec++ returned " << temp << " (value is now " << testIncDec << ")" << std::endl;
+std::cout << std::endl;
 
-// // Test pre-decrement
-// std::cout << "Pre-decrement tests (--obj):" << std::endl;
-// std::cout << "--testIncDec = " << --testIncDec << " (value is now " << testIncDec << ")" << std::endl;
-// std::cout << std::endl;
+//Test pre-decrement
+std::cout << "Pre-decrement tests (--obj):" << std::endl;
+std::cout << "--testIncDec = " << --testIncDec << " (value is now " << testIncDec << ")" << std::endl;
+std::cout << std::endl;
 
-// // Test post-decrement
-// std::cout << "Post-decrement tests (obj--):" << std::endl;
-// temp = testIncDec--;
-// std::cout << "testIncDec-- returned " << temp << " (value is now " << testIncDec << ")" << std::endl;
-// std::cout << std::endl;
+//Test post-decrement
+std::cout << "Post-decrement tests (obj--):" << std::endl;
+temp = testIncDec--;
+std::cout << "testIncDec-- returned " << temp << " (value is now " << testIncDec << ")" << std::endl;
+std::cout << std::endl;
 
-// ===== MIN/MAX STATIC FUNCTIONS TESTING =====
+//===== MIN/MAX STATIC FUNCTIONS TESTING =====
 std::cout << "=== MIN/MAX STATIC FUNCTIONS ===" << std::endl;
 
 // // Test min functions
