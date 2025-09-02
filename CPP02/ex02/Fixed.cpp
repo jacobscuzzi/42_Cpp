@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbaumfal <jbaumfal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jbaumfal <jbaumfal@42.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 20:27:23 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/09/01 16:46:07 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/09/02 15:15:26 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,4 +125,40 @@ bool	Fixed::operator>(const Fixed &other) const
 bool	Fixed::operator>=(const Fixed &other) const
 {
 	return (rawBits >= other.rawBits);
+}
+
+// ===== ARITHMETIC OPERATORS =====
+
+Fixed	Fixed::operator+(const Fixed &other) const
+{
+	Fixed	sum;
+
+	sum.rawBits = rawBits + other.rawBits;
+	return (sum);
+}
+
+Fixed	Fixed::operator-(const Fixed &other) const
+{
+	Fixed	dif;
+
+	dif.rawBits = rawBits - other.rawBits;
+	return (dif);
+}
+
+Fixed	Fixed::operator*(const Fixed &other) const
+{
+	Fixed prod;
+
+	prod.setRawBits((rawBits * other.rawBits) >> fracionalBits);
+
+	return (prod);
+}
+
+Fixed	Fixed::operator/(const Fixed &other) const
+{
+	Fixed quot;
+
+	quot.setRawBits((this->rawBits << fracionalBits) / other.rawBits);
+
+	return (quot);
 }
