@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@42.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 12:57:23 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/09/02 17:34:29 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/09/04 19:31:59 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,116 +167,117 @@ std::cout << std::endl;
 //===== MIN/MAX STATIC FUNCTIONS TESTING =====
 std::cout << "=== MIN/MAX STATIC FUNCTIONS ===" << std::endl;
 
-// // Test min functions
-// std::cout << "Min function tests:" << std::endl;
-// Fixed minVal1 = Fixed::min(b, c);
-// std::cout << "Fixed::min(" << b << ", " << c << ") = " << minVal1 << std::endl;
+//Test min functions
+std::cout << "Min function tests:" << std::endl;
+Fixed minVal1 = Fixed::min(b, c);
+std::cout << "Fixed::min(" << b << ", " << c << ") = " << minVal1 << std::endl;
 
-// Fixed minVal2 = Fixed::min(Fixed(100), Fixed(50));
-// std::cout << "Fixed::min(Fixed(100), Fixed(50)) = " << minVal2 << std::endl;
+Fixed minVal2 = Fixed::min(Fixed(100), Fixed(50));
+std::cout << "Fixed::min(Fixed(100), Fixed(50)) = " << minVal2 << std::endl;
 
-// // Test const version
-// const Fixed constB(10);
-// const Fixed constC(42.42f);
-// Fixed minConstVal = Fixed::min(constB, constC);
-// std::cout << "Fixed::min(const Fixed(10), const Fixed(42.42f)) = " << minConstVal << std::endl;
-// std::cout << std::endl;
+//Test const version
+const Fixed constB(10);
+const Fixed constC(42.42f);
+Fixed minConstVal = Fixed::min(constB, constC);
+std::cout << "Fixed::min(const Fixed(10), const Fixed(42.42f)) = " << minConstVal << std::endl;
+std::cout << std::endl;
 
-// // Test max functions
-// std::cout << "Max function tests:" << std::endl;
-// Fixed maxVal1 = Fixed::max(b, c);
-// std::cout << "Fixed::max(" << b << ", " << c << ") = " << maxVal1 << std::endl;
+//Test max functions
+std::cout << "Max function tests:" << std::endl;
+Fixed maxVal1 = Fixed::max(b, c);
+std::cout << "Fixed::max(" << b << ", " << c << ") = " << maxVal1 << std::endl;
 
-// Fixed maxVal2 = Fixed::max(Fixed(25), Fixed(75));
-// std::cout << "Fixed::max(Fixed(25), Fixed(75)) = " << maxVal2 << std::endl;
+Fixed maxVal2 = Fixed::max(Fixed(25), Fixed(75));
+std::cout << "Fixed::max(Fixed(25), Fixed(75)) = " << maxVal2 << std::endl;
 
-// // Test const version
-// Fixed maxConstVal = Fixed::max(constB, constC);
-// std::cout << "Fixed::max(const Fixed(10), const Fixed(42.42f)) = " << maxConstVal << std::endl;
-// std::cout << std::endl;
+//Test const version
+Fixed maxConstVal = Fixed::max(constB, constC);
+std::cout << "Fixed::max(const Fixed(10), const Fixed(42.42f)) = " << maxConstVal << std::endl;
+std::cout << std::endl;
 
-// ===== COMPLEX EXPRESSIONS TESTING =====
+//===== COMPLEX EXPRESSIONS TESTING =====
 std::cout << "=== COMPLEX EXPRESSIONS ===" << std::endl;
 
-// // Test complex arithmetic
-// std::cout << "Complex arithmetic:" << std::endl;
-// Fixed result1 = (Fixed(10) + Fixed(5)) * Fixed(2);
-// std::cout << "(Fixed(10) + Fixed(5)) * Fixed(2) = " << result1 << std::endl;
+// Test complex arithmetic
+std::cout << "Complex arithmetic:" << std::endl;
+Fixed result1 = (Fixed(10) + Fixed(5)) * Fixed(2);
+std::cout << "(Fixed(10) + Fixed(5)) * Fixed(2) = " << result1 << std::endl;
 
-// Fixed result2 = Fixed(20) / (Fixed(4) - Fixed(2));
-// std::cout << "Fixed(20) / (Fixed(4) - Fixed(2)) = " << result2 << std::endl;
-// std::cout << std::endl;
+Fixed result2 = Fixed(20) / (Fixed(4) - Fixed(2));
+std::cout << "Fixed(20) / (Fixed(4) - Fixed(2)) = " << result2 << std::endl;
+std::cout << std::endl;
 
-// // Test chained comparisons and logic
-// std::cout << "Chained comparisons:" << std::endl;
-// bool chainResult1 = (Fixed(5) < Fixed(10)) && (Fixed(10) < Fixed(15));
-// std::cout << "(Fixed(5) < Fixed(10)) && (Fixed(10) < Fixed(15)) = " << chainResult1 << std::endl;
+//Test chained comparisons and logic
+std::cout << "Chained comparisons:" << std::endl;
+bool chainResult1 = (Fixed(5) < Fixed(10)) && (Fixed(10) < Fixed(15));
+std::cout << "(Fixed(5) < Fixed(10)) && (Fixed(10) < Fixed(15)) = " << chainResult1 << std::endl;
 
-// bool chainResult2 = (Fixed(100) > Fixed(50)) || (Fixed(10) == Fixed(5));
-// std::cout << "(Fixed(100) > Fixed(50)) || (Fixed(10) == Fixed(5)) = " << chainResult2 << std::endl;
-// std::cout << std::endl;
+bool chainResult2 = (Fixed(100) > Fixed(50)) || (Fixed(10) == Fixed(5));
+std::cout << "(Fixed(100) > Fixed(50)) || (Fixed(10) == Fixed(5)) = " << chainResult2 << std::endl;
+std::cout << std::endl;
 
-// ===== EDGE CASE TESTING =====
+//===== EDGE CASE TESTING =====
 std::cout << "=== EDGE CASE TESTING ===" << std::endl;
 
-// // Test with zero
-// std::cout << "Operations with zero:" << std::endl;
-// Fixed zero;
-// Fixed five(5);
-// std::cout << "Fixed(0) + Fixed(5) = " << (zero + five) << std::endl;
-// std::cout << "Fixed(5) - Fixed(5) = " << (five - five) << std::endl;
-// std::cout << "Fixed(0) == Fixed(0) = " << (zero == Fixed(0)) << std::endl;
-// std::cout << std::endl;
+//Test with zero
+std::cout << "Operations with zero:" << std::endl;
+Fixed zero;
+Fixed five(5);
+std::cout << "Fixed(0) + Fixed(5) = " << (zero + five) << std::endl;
+std::cout << "Fixed(5) - Fixed(5) = " << (five - five) << std::endl;
+std::cout << "Fixed(0) == Fixed(0) = " << (zero == Fixed(0)) << std::endl;
+std::cout << std::endl;
 
-// // Test with negative numbers
-// std::cout << "Operations with negative numbers:" << std::endl;
-// Fixed neg(-5.5f);
-// Fixed pos(5.5f);
-// std::cout << "Fixed(-5.5f) + Fixed(5.5f) = " << (neg + pos) << std::endl;
-// std::cout << "Fixed(-5.5f) * Fixed(-2) = " << (neg * Fixed(-2)) << std::endl;
-// std::cout << "Fixed(-5.5f) < Fixed(0) = " << (neg < zero) << std::endl;
-// std::cout << std::endl;
+//Test with negative numbers
+std::cout << "Operations with negative numbers:" << std::endl;
+Fixed neg(-5.5f);
+Fixed pos(5.5f);
+std::cout << "Fixed(-5.5f) + Fixed(5.5f) = " << (neg + pos) << std::endl;
+std::cout << "Fixed(-5.5f) * Fixed(-2) = " << (neg * Fixed(-2)) << std::endl;
+std::cout << "Fixed(-5.5f) < Fixed(0) = " << (neg < zero) << std::endl;
+std::cout << std::endl;
 
-// // Test increment/decrement with zero and small values
-// Fixed smallTest(0.0f);
-// std::cout << "Increment/decrement near zero:" << std::endl;
-// std::cout << "Starting with: " << smallTest << std::endl;
-// std::cout << "After ++: " << ++smallTest << std::endl;
-// std::cout << "After --: " << --smallTest << std::endl;
-// std::cout << std::endl;
+//Test increment/decrement with zero and small values
+Fixed smallTest(0.0f);
+std::cout << "Increment/decrement near zero:" << std::endl;
+std::cout << "Starting with: " << smallTest << std::endl;
+std::cout << "After ++: " << ++smallTest << std::endl;
+std::cout << "After --: " << --smallTest << std::endl;
+std::cout << std::endl;
 
-// ===== PROVIDED EXAMPLE FROM SUBJECT =====
+//===== PROVIDED EXAMPLE FROM SUBJECT =====
 std::cout << "=== PROVIDED EXAMPLE FROM SUBJECT ===" << std::endl;
 
-// This is the exact example from the PDF
-//Fixed testA;
-//Fixed const testB( Fixed( 5.05f ) * Fixed( 2 ) );
+//This is the exact example from the PDF
+Fixed testA;
+Fixed const testB( Fixed( 5.05f ) * Fixed( 2 ) );
 
-//std::cout << testA << std::endl;
-// std::cout << ++testA << std::endl;
-// std::cout << testA << std::endl;
-// std::cout << testA++ << std::endl;
-// std::cout << testA << std::endl;
+std::cout << testA << std::endl;
+std::cout << ++testA << std::endl;
+std::cout << testA << std::endl;
+std::cout << testA++ << std::endl;
+std::cout << testA << std::endl;
 
-//std::cout << testB << std::endl;
+std::cout << testB << std::endl;
 
-// std::cout << Fixed::max( testA, testB ) << std::endl;
+std::cout << Fixed::max( testA, testB ) << std::endl;
 
 std::cout << std::endl << "=== END OF TESTING ===" << std::endl;
 
 return 0;
 }
 
-
-// int main( void ) {
-// 	Fixed a;
-// 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-// 	std::cout << a << std::endl;
-// 	std::cout << ++a << std::endl;
-// 	std::cout << a << std::endl;
-// 	std::cout << a++ << std::endl;
-// 	std::cout << a << std::endl;
-// 	std::cout << b << std::endl;
-// 	std::cout << Fixed::max( a, b ) << std::endl;
-// 	return 0;
-// }
+/*
+int main( void ) {
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
+	return 0;
+}
+	*/

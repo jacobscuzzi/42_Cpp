@@ -6,7 +6,7 @@
 /*   By: jbaumfal <jbaumfal@42.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 20:27:23 by jbaumfal          #+#    #+#             */
-/*   Updated: 2025/09/02 18:13:26 by jbaumfal         ###   ########.fr       */
+/*   Updated: 2025/09/04 19:28:50 by jbaumfal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,26 +193,32 @@ Fixed	Fixed::operator--( int )
 
 //	MIN / MAX
 
-static Fixed	&max( Fixed &a,  Fixed &b)
+Fixed	&Fixed::max( Fixed &a,  Fixed &b)
 {
-	if (a.getRawBits() >= b.getRawBits())
+	if (a >= b)
 		return (a);
 	else
 		return (b);
 }
-static const Fixed	&max(const Fixed &a, const Fixed &b)
+const Fixed	&Fixed::max(const Fixed &a, const Fixed &b)
 {
-	
+	if (a >= b)
+		return (a);
+	else
+		return (b);
 }
 
-static Fixed	&min( Fixed &a,  Fixed &b)
+Fixed	&Fixed::min( Fixed &a,  Fixed &b)
 {
-	if (a.getRawBits() <= b.getRawBits())
+	if (a <= b)
 		return (a);
 	else
 		return (b);
 }
-static	const Fixed	&min(const Fixed &a, const Fixed &b)
+const Fixed	&Fixed::min(const Fixed &a, const Fixed &b)
 {
-	
+	if (a <= b)
+		return (a);
+	else
+		return (b);
 }
